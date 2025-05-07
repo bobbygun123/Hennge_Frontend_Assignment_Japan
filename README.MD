@@ -1,9 +1,6 @@
 # 🧑‍💻 HENNGE Frontend Challenge – User Creation Form with Password Validation
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-## 📌 Overview
-
-This project is a solution to the HENNGE Frontend Challenge. It features a user creation form with real-time password validation and API integration, built using React and TypeScript.
 
 ---
 
@@ -11,19 +8,27 @@ This project is a solution to the HENNGE Frontend Challenge. It features a user 
 
 - [Overview](#overview)
 - [Features](#features)
-- [Tech Stack](#tech-stack)
+- [Technology Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [API Integration](#api-integration)
 - [Validation Rules](#validation-rules)
 - [Error Handling](#error-handling)
 - [Accessibility](#accessibility)
+- [Security Note](#security-note)
+- [Testing](#testing)
 - [Project Structure](#project-structure)
 - [License](#license)
 
 ---
 
-## ✨ Features
+## Overview
+
+This project is a solution to the HENNGE Frontend Challenge. It features a user creation form with real-time password validation and API integration, built using React and TypeScript.
+
+---
+
+## Features
 
 - **Username and Password Fields**: Users can input their desired username and password.
 - **Password Validation**: Client-side validation ensures the password meets specific criteria.
@@ -33,7 +38,7 @@ This project is a solution to the HENNGE Frontend Challenge. It features a user 
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - React (with Hooks)
 - TypeScript
@@ -42,7 +47,7 @@ This project is a solution to the HENNGE Frontend Challenge. It features a user 
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Prerequisites
 
@@ -70,7 +75,7 @@ pnpm run dev
 
 Navigate to http://localhost:3000 in your browser to view the application.
 
-## 🧪 Usage
+## Usage
 
 1. Enter a Username.
 
@@ -78,8 +83,7 @@ Navigate to http://localhost:3000 in your browser to view the application.
 
 3. Click Submit to create a new user.
 
-
-## 🔗 API Integration
+## API Integration
 
 - Endpoint: /challenge-signup
 
@@ -100,7 +104,7 @@ Navigate to http://localhost:3000 in your browser to view the application.
 }
 ```
 
-## ✅ Validation Rules
+## Validation Rules
 
 - Password must be at least 10 characters long
 
@@ -114,7 +118,7 @@ Navigate to http://localhost:3000 in your browser to view the application.
 
 - Password must contain at least one lowercase letter
 
-## ⚠️ Error Handling
+## Error Handling
 
 - 500 Internal Server Error: "Something went wrong, please try again."
 
@@ -122,11 +126,11 @@ Navigate to http://localhost:3000 in your browser to view the application.
 
 - 401/403 Unauthorized: "Not authenticated to access this resource."
 
-## ♿ Accessibility
+## Accessibility
 
 Implemented aria-invalid attributes on input fields to enhance accessibility for users relying on assistive technologies.
 
-## 🔐 Security Note
+## Security Note
 
 For this assignment, the API key is hardcoded within the application. In a production environment, it's crucial to:
 
@@ -134,7 +138,7 @@ For this assignment, the API key is hardcoded within the application. In a produ
 
 - Use secure methods to handle authentication credentials.
 
-## 🧪 Testing
+## Testing
 
 To test the application:
 
@@ -144,15 +148,16 @@ To test the application:
 
 3. Try creating a user with valid and invalid credentials to observe the form's behavior.
 
-## 🗂️ Project Structure
+## Project Structure
 
+```bash
 hennge-frontend-challenge/
 ├── public/
 ├── src/
 │   ├── app.tsx
 │   ├── create-user-form.tsx
 │   ├── main.tsx
-│   ├── style.css
+│   └── style.css
 ├── .env
 ├── .gitignore
 ├── index.html
@@ -160,8 +165,8 @@ hennge-frontend-challenge/
 ├── tsconfig.app.json
 ├── tsconfig.json
 └── README.md
+```
 
-
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
