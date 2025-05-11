@@ -1,172 +1,136 @@
-# 🧑‍💻 HENNGE Frontend Challenge – User Creation Form with Password Validation
+# Hennge Frontend Assignment
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Hennge Challenge](https://img.shields.io/badge/Hennge%20Challenge-Frontend%20Assignment-brightgreen)
 
----
+Welcome to the Hennge Frontend Assignment repository! This project showcases a React TypeScript application developed for HENNGE's Password Validation Challenge. The application focuses on user registration, dynamic password validation, API integration, and robust error handling.
 
-## 📖 Table of Contents
+## Table of Contents
 
-- [Overview](#overview)
 - [Features](#features)
-- [Technology Used](#technologies-used)
+- [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
-- [API Integration](#api-integration)
-- [Validation Rules](#validation-rules)
-- [Error Handling](#error-handling)
-- [Accessibility](#accessibility)
-- [Security Note](#security-note)
-- [Testing](#testing)
-- [Project Structure](#project-structure)
+- [Folder Structure](#folder-structure)
+- [Contributing](#contributing)
 - [License](#license)
-
----
-
-## Overview
-
-This project is a solution to the HENNGE Frontend Challenge. It features a user creation form with real-time password validation and API integration, built using React and TypeScript.
-
----
+- [Links](#links)
 
 ## Features
 
-- **Username and Password Fields**: Users can input their desired username and password.
-- **Password Validation**: Client-side validation ensures the password meets specific criteria.
-- **API Integration**: Upon submission, the form sends a POST request to the HENNGE API to create the user.
-- **Error Handling**: Displays user-friendly error messages based on API responses.
-- **Responsive Design**: Ensures usability across various devices.
-
----
+- **User Registration**: Users can create accounts with an easy-to-use registration form.
+- **Dynamic Password Validation**: The app checks password strength in real-time, ensuring users meet security requirements.
+- **API Integration**: Connects with a backend service for user data management.
+- **Error Handling**: Provides clear feedback for input errors, enhancing user experience.
+- **Accessibility**: Designed with accessibility in mind to ensure all users can interact with the app.
 
 ## Technologies Used
 
-- React (with Hooks)
-- TypeScript
-- CSS for styling
-- Fetch API for HTTP requests
+This project utilizes the following technologies:
 
----
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **React Hooks**: For managing state and lifecycle methods in functional components.
+- **CSS Modules**: For modular and reusable styles.
+- **Axios**: For making HTTP requests to the API.
+- **Jest**: For unit testing the application components.
 
 ## Getting Started
 
-### 1. Prerequisites
+To get started with the Hennge Frontend Assignment, follow these steps:
 
-- Node.js >= 14
-- pnpm >= 6
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/bobbygun123/Hennge_Frontend_Assignment_Japan.git
+   cd Hennge_Frontend_Assignment_Japan
+   ```
 
-### 2. Clone the Repository
+2. **Install Dependencies**:
+   Run the following command to install the required packages:
+   ```bash
+   npm install
+   ```
 
-```bash
-git clone https://github.com/yourusername/hennge-frontend-challenge.git
-cd hennge-frontend-challenge
-```
-
-### 3. Install Dependencies
-
-```bash
-pnpm install
-```
-
-### 4. Run the Development Server
-
-```bash
-pnpm run dev
-```
-
-Navigate to http://localhost:5173/ in your browser to view the application.
+3. **Run the Application**:
+   Start the development server with:
+   ```bash
+   npm start
+   ```
+   Open your browser and navigate to `http://localhost:3000` to view the application.
 
 ## Usage
 
-1. Enter a Username.
+The application allows users to register by filling out a form. The form validates user input in real-time, providing feedback on password strength and other fields. 
 
-2. Enter a Password that meets all validation criteria.
+### Dynamic Password Validation
 
-3. Click Submit to create a new user.
+The password field includes criteria such as:
 
-## API Integration
+- Minimum length
+- Inclusion of uppercase letters
+- Inclusion of numbers
+- Inclusion of special characters
 
-- Endpoint: /challenge-signup
+As users type, they receive immediate feedback on whether their password meets the requirements.
 
-- Method: POST
+### API Integration
 
-- Headers:
+The app communicates with a backend API to manage user registration. It sends user data and handles responses to ensure smooth operation.
 
-  - Authorization: Bearer token provided in the challenge details.
+## Folder Structure
 
-  - Content-Type: application/json
+Here’s an overview of the project’s folder structure:
 
-- Body:
-
-```bash
-{
-  "username": "your_username",
-  "password": "your_password"
-}
 ```
-
-## Validation Rules
-
-- Password must be at least 10 characters long
-
-- Password must be at most 24 characters long
-
-- Password cannot contain spaces
-
-- Password must contain at least one number
-
-- Password must contain at least one uppercase letter
-
-- Password must contain at least one lowercase letter
-
-## Error Handling
-
-- 500 Internal Server Error: "Something went wrong, please try again."
-
-- Common Password Error: "Sorry, the entered password is not allowed, please try a different one."
-
-- 401/403 Unauthorized: "Not authenticated to access this resource."
-
-## Accessibility
-
-Implemented aria-invalid attributes on input fields to enhance accessibility for users relying on assistive technologies.
-
-## Security Note
-
-For this assignment, the API key is hardcoded within the application. In a production environment, it's crucial to:
-
-- Store sensitive keys in environment variables.
-
-- Use secure methods to handle authentication credentials.
-
-## Testing
-
-To test the application:
-
-1. Ensure the development server is running.
-
-2. Open the application in your browser.
-
-3. Try creating a user with valid and invalid credentials to observe the form's behavior.
-
-## Project Structure
-
-```bash
-hennge-frontend-challenge/
+Hennge_Frontend_Assignment_Japan/
 ├── public/
+│   ├── index.html
+│   └── favicon.ico
 ├── src/
-│   ├── app.tsx
-│   ├── create-user-form.tsx
-│   ├── main.tsx
-│   └── style.css
-├── .env
-├── .gitignore
-├── index.html
+│   ├── components/
+│   │   ├── RegistrationForm.tsx
+│   │   └── PasswordStrengthIndicator.tsx
+│   ├── hooks/
+│   │   └── usePasswordValidation.ts
+│   ├── services/
+│   │   └── api.ts
+│   ├── styles/
+│   │   └── App.module.css
+│   ├── App.tsx
+│   └── index.tsx
 ├── package.json
-├── tsconfig.app.json
-├── tsconfig.json
-└── README.md
+└── tsconfig.json
 ```
+
+- **components/**: Contains reusable components such as the registration form and password strength indicator.
+- **hooks/**: Custom hooks for managing password validation logic.
+- **services/**: API service for handling HTTP requests.
+- **styles/**: CSS modules for styling components.
+
+## Contributing
+
+We welcome contributions to improve this project. To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push to your branch and submit a pull request.
+
+Please ensure your code follows the existing style and includes appropriate tests.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Links
+
+For the latest updates and releases, please visit the [Releases section](https://github.com/bobbygun123/Hennge_Frontend_Assignment_Japan/releases). You can download the latest version of the application from there.
+
+Feel free to explore the code and contribute to this project. Your feedback is valuable!
+
+## Acknowledgments
+
+Thank you to HENNGE for this challenge and the opportunity to showcase my skills in React and TypeScript. 
+
+---
+
+This README provides a comprehensive overview of the Hennge Frontend Assignment project. If you have any questions or suggestions, feel free to reach out through the repository.
